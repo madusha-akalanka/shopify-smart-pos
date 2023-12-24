@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="518.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lk.pos.PlaceOrderFormController">
+   <children>
+      <ImageView fx:id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="16.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="20.0" prefHeight="45.0" prefWidth="381.0" text="Place Order" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNew" layoutX="488.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Order" />
+
+            <TextField fx:id="txtCustomerName" layoutX="17.0" layoutY="162.0" promptText="Customer Name:" />
+            <TextField fx:id="txtDescription" layoutX="17.0" layoutY="264.0" promptText="Item Description: " />
+            <TextField fx:id="txtQtyOnHand" layoutX="17.0" layoutY="226.0" promptText="QTY. on Hand" />
+
+
+      <JFXButton fx:id="btnSave" layoutX="17.0" layoutY="345.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="ADD" />
+      <TableView layoutX="231.0" layoutY="86.0" prefHeight="317.0" prefWidth="387.0">
+        <columns>
+          <TableColumn prefWidth="52.0" text="Code" />
+          <TableColumn fx:id="tblOrderDetails" prefWidth="129.0" text="Description" />
+            <TableColumn prefWidth="104.0" text="QTY" />
+            <TableColumn prefWidth="120.0" text="Unit Price" />
+            <TableColumn prefWidth="120.0" text="Total" />
+            <TableColumn prefWidth="120.0" text="Delete" />
+        </columns>
+      </TableView>
+
+      <TextField fx:id="txtUnitPrice" layoutX="17.0" layoutY="194.0" promptText="Unit Price:" />
+      <ComboBox fx:id="cmbCustomerId" layoutX="13.0" layoutY="86.0" prefHeight="26.0" prefWidth="176.0" promptText="Customer ID: " />
+      <ComboBox fx:id="cmbItemCode" layoutX="15.0" layoutY="119.0" prefHeight="26.0" prefWidth="176.0" promptText="Item Code:" />
+
+      <TextField layoutX="18.0" layoutY="297.0" onAction="#txtQty_OnAction" prefHeight="28.0" prefWidth="176.0" promptText="Qty." />
+      <Label alignment="CENTER_RIGHT" layoutX="517.0" layoutY="427.0" prefHeight="15.0" prefWidth="102.0" text="2023-10-12" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="488.0" layoutY="464.0" prefHeight="35.0" prefWidth="134.0" text="TOTAL: 0.00" textAlignment="RIGHT" textFill="#b90909">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="17.0" layoutY="457.0" onAction="#btnPlaceOrderOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand;-fx-background-color: orange;-fx-text-fill: black" text="Place Order" textFill="#39393c" />
+      
+   </children>
+
+   <stylesheets>
+      <URL value="@../style/manageitemform.css" />
+      <URL value="@../style/style.css" />
+   </stylesheets>
+</AnchorPane>

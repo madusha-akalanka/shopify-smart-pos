@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="true" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lk.pos.controller.ManageCustomerFormController">
+   <children>
+      <ImageView fx:id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="16.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="20.0" prefHeight="45.0" prefWidth="381.0" text="Manage Customer" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNew" layoutX="488.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Customer" />
+      <VBox layoutX="204.0" layoutY="130.0" prefHeight="140.0" prefWidth="232.0" spacing="20.0">
+         <children>
+            <TextField layoutX="17.0" layoutY="118.0" promptText="Customer ID" />
+            <TextField layoutX="10.0" layoutY="10.0" promptText="Customer Name" />
+            <TextField layoutX="10.0" layoutY="34.0" promptText="Address" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnSave" layoutX="150.0" layoutY="320.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="Save" />
+      <JFXButton fx:id="btnDelete" layoutX="360.0" layoutY="320.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="Delete" />
+      
+   </children>
+
+   <stylesheets>
+      <URL value="@../style/managecustomerform.css" />
+      <URL value="@../style/style.css" />
+   </stylesheets>
+</AnchorPane>

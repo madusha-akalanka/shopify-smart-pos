@@ -1,0 +1,21 @@
+
+.mainFXMLClass{
+    -fx-background-color: red;
+}
+
+#imgHome:hover{
+    -fx-effect: dropshadow(gaussian,#6495ED,20,0.0,0,0);
+}
+
+#btnAddNewCustomer{
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+#btnSave{
+    -fx-background-color: #218838;
+    -fx-text-fill: white;
+}
+#btnDelete{
+    -fx-background-color: #ffc107;
+}

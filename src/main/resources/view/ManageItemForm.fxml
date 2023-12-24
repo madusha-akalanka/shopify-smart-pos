@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="true" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lk.pos.controller.ManageItemFormController">
+   <children>
+      <ImageView fx:id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="16.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="20.0" prefHeight="45.0" prefWidth="381.0" text="Manage Item" textAlignment="CENTER">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNew" layoutX="488.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Item" />
+      <VBox layoutX="14.0" layoutY="98.0" prefHeight="164.0" prefWidth="222.0" spacing="20.0">
+         <children>
+            <TextField fx:id="txtCode" layoutX="17.0" layoutY="118.0" promptText="Customer Item Code" />
+            <TextField fx:id="txtDescription" layoutX="10.0" layoutY="10.0" promptText="Item Description: " />
+            <TextField fx:id="txtQtyOnHand" layoutX="10.0" layoutY="34.0" promptText="QTY. on Hand" />
+            <TextField fx:id="txtUnitPrice" layoutX="10.0" layoutY="34.0" promptText="Unit Price" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnSave" layoutX="22.0" layoutY="303.0" onAction="#btnSaveOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="Save" />
+      <JFXButton fx:id="btnDelete" layoutX="22.0" layoutY="351.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="Delete" />
+      <TableView layoutX="243.0" layoutY="92.0" prefHeight="294.0" prefWidth="387.0">
+        <columns>
+          <TableColumn prefWidth="52.0" text="Code" />
+          <TableColumn fx:id="tblItems" prefWidth="129.0" text="Description" />
+            <TableColumn prefWidth="104.0" text="QTY. on Hand" />
+            <TableColumn prefWidth="120.0" text="Unit Price" />
+        </columns>
+      </TableView>
+      
+   </children>
+
+   <stylesheets>
+      <URL value="@../style/managecustomerform.css" />
+      <URL value="@../style/style.css" />
+   </stylesheets>
+</AnchorPane>
