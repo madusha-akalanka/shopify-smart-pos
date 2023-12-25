@@ -5,11 +5,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.lk.pos.db.DbConnection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class AppInitializer extends Application {
 
     public static void main(String[] args) {
-        launch(args);
+        try (Connection connection = DbConnection.getInstance().getConnection()) {
+            launch(args);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
 
 
     }

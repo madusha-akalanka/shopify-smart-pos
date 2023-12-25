@@ -12,7 +12,8 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lk.pos.SearchOrderFormController">
+<?import javafx.scene.Cursor?>
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.lk.pos.controller.SearchOrderFormController">
    <children>
       <TextField fx:id="txtSearch" layoutX="27.0" layoutY="139.0" prefHeight="32.0" prefWidth="251.0" promptText="Eg. Kasun Sampath, C001, etc." />
       <Label layoutX="30.0" layoutY="108.0" prefHeight="24.0" prefWidth="245.0" text="Enter something to search here:">
@@ -38,11 +39,13 @@
                </LinearGradient>
            </fill>
        </Rectangle>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="51.0" fitWidth="97.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="51.0" fitWidth="97.0" layoutX="27.0" layoutY="14.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asset/home-icon.png" />
          </image>
+          <cursor>
+              <Cursor fx:constant="HAND" />
+          </cursor>
       </ImageView>
       <Label layoutX="237.0" layoutY="27.0" text="SEARCH ORDERS">
          <font>
