@@ -19,3 +19,12 @@
 #btnDelete{
     -fx-background-color: #ffc107;
 }
+
+.table-row-cell:selected{
+    -fx-background-color:linear-gradient(from 0% 0% to 100% 100%,white 0%, #007bff,white 100%);
+
+}
+
+.table-row-cell:selected .table-cell{
+    -fx-text-fill: black !important;
+}

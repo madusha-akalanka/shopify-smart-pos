@@ -23,7 +23,7 @@ public class PlaceOrderFormController {
     public ComboBox cmbCustomerId;
     public ComboBox cmbItemCode;
     public JFXButton btnPlaceOrder;
-    public JFXButton btnAddNew;
+    public JFXButton btnAddNewItem;
 
 
 

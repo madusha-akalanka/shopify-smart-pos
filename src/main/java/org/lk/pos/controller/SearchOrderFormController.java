@@ -14,7 +14,7 @@ public class SearchOrderFormController {
     public AnchorPane root;
     public TextField txtSearch;
     public TableView tblOrders;
-    public ImageView imgViewOrder;
+    public ImageView imgHome;
 
     public void navigateToHome(MouseEvent mouseEvent) throws IOException {
         MainFormController.navigateToMain(root);

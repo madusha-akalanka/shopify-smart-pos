@@ -28,7 +28,7 @@
             <Font name="DejaVu Sans Mono Bold" size="21.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnAddNew" layoutX="488.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Item" />
+      <JFXButton fx:id="btnAddNewItem" layoutX="464.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Item" />
       <VBox layoutX="14.0" layoutY="98.0" prefHeight="164.0" prefWidth="222.0" spacing="20.0">
          <children>
             <TextField fx:id="txtCode" layoutX="17.0" layoutY="118.0" promptText="Customer Item Code" />
@@ -51,7 +51,7 @@
    </children>
 
    <stylesheets>
-      <URL value="@../style/managecustomerform.css" />
+      <URL value="@../style/manageitemform.css" />
       <URL value="@../style/style.css" />
    </stylesheets>
 </AnchorPane>
