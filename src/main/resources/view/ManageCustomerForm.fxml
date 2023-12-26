@@ -28,7 +28,7 @@
             <Font name="DejaVu Sans Mono Bold" size="21.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnAddNew" layoutX="488.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Customer" />
+      <JFXButton fx:id="btnAddNewCustomer" layoutX="458.0" layoutY="25.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="+ New Customer" />
       <VBox layoutX="14.0" layoutY="122.0" prefHeight="181.0" prefWidth="232.0" spacing="20.0">
          <children>
             <TextField fx:id="txtCustomerId" layoutX="17.0" layoutY="118.0" promptText="Customer ID" />
@@ -38,11 +38,11 @@
          </children>
       </VBox>
       <JFXButton fx:id="btnDelete" layoutX="14.0" layoutY="312.0" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: Hand" text="Delete" />
-      <TableView fx:id="tblCustomer" layoutX="249.0" layoutY="100.0" prefHeight="276.0" prefWidth="381.0">
+      <TableView fx:id="tblCustomer" layoutX="249.0" layoutY="100.0" prefHeight="276.0" prefWidth="375.0">
         <columns>
           <TableColumn prefWidth="107.0" text="Customer ID" />
-          <TableColumn prefWidth="104.0" text="Customer Name" />
-            <TableColumn prefWidth="138.0" text="Customer Address" />
+          <TableColumn prefWidth="120.0" text="Customer Name" />
+            <TableColumn prefWidth="153.0" text="Customer Address" />
         </columns>
       </TableView>
       

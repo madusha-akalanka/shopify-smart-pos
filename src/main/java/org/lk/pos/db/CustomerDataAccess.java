@@ -17,7 +17,7 @@ public class CustomerDataAccess {
     static {
         try {
             Connection connection = DbConnection.getInstance().getConnection();
-            STM_GET_ALL = connection.prepareStatement("SELECT * FROM customer");
+            STM_GET_ALL = connection.prepareStatement("SELECT * FROM customer ORDER BY id");
             STM_INSERT = connection.prepareStatement("INSERT INTO customer(id, name, address) VALUES (?,?,?)");
             STM_UPDATE = connection.prepareStatement("UPDATE customer SET name=?,address=? WHERE id=?");
             STM_DELETE = connection.prepareStatement("DELETE FROM customer WHERE id=?");
